@@ -1,0 +1,41 @@
+.note-card{
+    display: flex;
+    flex-direction: column;
+background-color: #fff;
+width: 46%;
+height: 270px;
+margin: 10px;
+padding: 10px;
+border-radius: 10px;
+}
+.note-header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px;
+}
+.note-header h1{
+    font-size: 20px;
+}
+.note-header p {
+    font-size: 15px;
+    margin: 0 10px;
+}
+.note-description{
+    padding: 30px;
+}
+.note-footer{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.note-value{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #FA0909;
+    color:#FA0909
+}

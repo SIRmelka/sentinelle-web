@@ -5,12 +5,52 @@
 
 @import './atoms/avatar.css';
 @import './atoms/hamburger.css';
+@import './atoms/resumeBox.css';
 
 @import './molecules/user.css';
+@import './molecules/miniHeader.css';
+@import './molecules/noteCard.css';
+@import './organisms/statutStudent.css';
+
+@import './organisms/caroussel.css';
+@import './organisms/summary.css';
 
 
 @layer base{
   html{
       font-family: Work Sans;
   }
+}
+
+.home{
+  display: flex;
+   background-color: #F9F9F9;
+}
+
+.main-layout{
+ position: relative;
+  justify-content: space-around;
+}
+.main-btn{
+  background: #1EAAF1;
+  width: 120px;
+  padding: 10px;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.outlined-btn{
+  background: #fff;
+  width: 120px;
+  padding: 10px;
+  color: #1EAAF1;
+  border:1px solid #1EAAF1;
+  font-weight: 500;
+  border-radius: 5px;
+}
+h1,h2,h3,h4,h5,h6,p{
+  color: #444;
+}
+.primary-color{
+  color: #1EAAF1;
 }

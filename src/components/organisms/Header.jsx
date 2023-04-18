@@ -7,6 +7,14 @@ export default function Header() {
   return (
     <header className="navbar bg-primary-content border-primary justify-between">
       <Hamburger />
+      {/* <div style={}>
+        <input
+          type="text"
+          placeholder="Rechercher un communiqué"
+          className="input input-bordered w-full max-w-xs bg-white"
+        />
+      </div> */}
+
       <User />
       {/* <Title />
       <Avatar /> */}
