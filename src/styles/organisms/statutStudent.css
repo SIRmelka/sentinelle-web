@@ -1,0 +1,48 @@
+.statut-student{
+    display: flex;
+    justify-content: center;
+    width: 97%;
+    padding: 0 10px;
+    background: #fff;
+    margin: 20px 5px;
+    /* margin: 5px 10px; */
+}
+.statut-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.statut-student-container{
+width: 98%;
+height: 350px;
+margin: 20px 0;
+}
+.statut-student-container h1{
+    font-size: 20px;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+.content .picture{
+    background-color: #1EAAF1;
+    background-image: url('../../assets/images/kids.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 270px;
+    width: 250px;
+    margin: 0 10px;
+
+    border-radius: 110px 70px 70px 28px;
+}
+
+.content .resume{
+    flex:50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

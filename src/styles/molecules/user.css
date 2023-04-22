@@ -1,11 +1,11 @@
 .user{
-    width: 180px;
+    width: 200px;
     display: flex;
     border-radius: 35px;
     padding: 1px;
     align-items: center;
     justify-content: center;
     background-color: #1EAAF1;
-    color:#fff
+    color:#fff !important
 
 }
