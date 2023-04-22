@@ -1,0 +1,27 @@
+.home{
+  /* border: 5px solid yellow; */
+}
+.other-data{
+  justify-content: space-between;
+  flex-direction: row;
+  /* align-items: center; */
+  margin-top: 30px;
+  display: flex;
+}
+.ressources-card,.notes-card{
+  display: flex;
+  flex-wrap: wrap;
+}
+.notes-card{
+
+}
+
+@media (min-width:800px)
+{
+  .ressources{
+    flex: 50%;
+  }
+  .notes{
+    flex: 50%;
+  }
+}

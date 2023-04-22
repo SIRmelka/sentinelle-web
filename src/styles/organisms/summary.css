@@ -10,13 +10,6 @@
     top: 0;
     
 }
-.notes{
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
 @media (min-width:600px)
 {
     .summary-container{ 
