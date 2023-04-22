@@ -3,7 +3,7 @@ import Title from "../atoms/Title";
 import icon from "../../assets/images/quizz.png";
 import Button from "../atoms/Button";
 
-export default function RessourceCard({ background, name, price }) {
+export default function RessourceCard({ background, name, type, price }) {
   return (
     <div className="ressource-card">
       <div
@@ -11,8 +11,8 @@ export default function RessourceCard({ background, name, price }) {
         style={{ backgroundImage: `url(${background})` }}
       ></div>
       <div className="ressource-info">
-        <h2>Math</h2>
-        <p>Livre</p>
+        <h2>{name}</h2>
+        <p>{type}</p>
       </div>
       <div className="ressource-footer">
         <Button className={"sm-main-btn"} />
