@@ -28,59 +28,64 @@ export default function Home() {
 
   return (
     <>
-      {loading && <MainLoader />}
-      <Header />
-      <div className="home flex">
-        <SideBar />
+      {loading ? (
+        <MainLoader />
+      ) : (
         <div>
-          <div className="main-layout flex flex-row flex-wrap">
-            <div className="caroussel-container">
-              <Caroussel />
-            </div>
-            <div className="summary-container">
-              <Summary />
-            </div>
-          </div>
-          <div className="other-data flex-row flex-wrap">
-            <div className="ressources">
-              <div className="ressources-card">
-                {ressources &&
-                  ressources.map((ressource) => {
-                    return (
-                      <RessourceCard
-                        name={ressource.title}
-                        type={ressource.type}
-                        price={ressource.price}
-                        background={ressource.cover}
-                      />
-                    );
-                  })}
+          <Header />
+          <div className="home flex">
+            <SideBar />
+            <div>
+              <div className="main-layout flex flex-row flex-wrap">
+                <div className="caroussel-container">
+                  <Caroussel />
+                </div>
+                <div className="summary-container">
+                  <Summary />
+                </div>
               </div>
-              <p style={{ fontWeight: "bold", marginBottom: "10px" }}>
-                Publicité
-              </p>
-              <div className="add"></div>
-            </div>
-            <div className="notes">
-              <MiniHeader />
-              <div className="notes-card">
-                {works.map((work) => {
-                  return (
-                    <NoteCard
-                      label={work.type}
-                      cours={work.course}
-                      result={work.cote}
-                      date={work.date}
-                      maxima={work.maxima}
-                      description={work.description}
-                    />
-                  );
-                })}
+              <div className="other-data flex-row flex-wrap">
+                <div className="ressources">
+                  <div className="ressources-card">
+                    {ressources &&
+                      ressources.map((ressource) => {
+                        return (
+                          <RessourceCard
+                            name={ressource.title}
+                            type={ressource.type}
+                            price={ressource.price}
+                            background={ressource.cover}
+                          />
+                        );
+                      })}
+                  </div>
+                  <p style={{ fontWeight: "bold", marginBottom: "10px" }}>
+                    Publicité
+                  </p>
+                  <div className="add"></div>
+                </div>
+                <div className="notes">
+                  <MiniHeader />
+                  <div className="notes-card">
+                    {works.map((work) => {
+                      return (
+                        <NoteCard
+                          label={work.type}
+                          cours={work.course}
+                          result={work.cote}
+                          date={work.date}
+                          maxima={work.maxima}
+                          description={work.description}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
