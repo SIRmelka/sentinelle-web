@@ -89,3 +89,32 @@ h1,h2,h3,h4,h5,h6,p{
   color: #1EAAF1;
 }
 
+@media (max-width:800px)
+{
+
+  .sidebar{
+    display: none;
+  }
+
+ .content .picture{
+  height: 150px;
+  width: 150px;
+ }
+
+ .resume-box{
+  width: 80px;
+  height: 80px;
+ }
+ .ressource-card{
+  width: 95%;
+  height: 400px;
+  margin-top: 30px;
+ }
+ .note-card{
+  width: 93%;
+
+ }
+ .add{
+  display: none;
+ }
+}
