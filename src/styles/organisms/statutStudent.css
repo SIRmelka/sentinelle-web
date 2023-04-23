@@ -4,7 +4,7 @@
     width: 97%;
     padding: 0 10px;
     background: #fff;
-    margin: 20px 5px;
+    margin: 10px 5px;
     /* margin: 5px 10px; */
 }
 .statut-header{
@@ -45,4 +45,13 @@ margin: 20px 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.add{
+height: 80px;
+background-image: url("https://lirp.cdn-website.com/6f2c9f57/dms3rep/multi/opt/banner-01-1920w.png");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+
 }

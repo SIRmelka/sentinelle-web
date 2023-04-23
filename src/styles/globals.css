@@ -6,14 +6,19 @@
 @import './atoms/avatar.css';
 @import './atoms/hamburger.css';
 @import './atoms/resumeBox.css';
+@import './atoms/navigationButton.css';
 
 @import './molecules/user.css';
 @import './molecules/miniHeader.css';
 @import './molecules/noteCard.css';
-@import './organisms/statutStudent.css';
+@import './molecules/ressourceCard.css';
+@import './molecules/sideBar.css';
 
+@import './organisms/statutStudent.css';
 @import './organisms/caroussel.css';
 @import './organisms/summary.css';
+
+@import './Home.css';
 
 
 @layer base{
@@ -35,6 +40,14 @@
   background: #1EAAF1;
   width: 120px;
   padding: 10px;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.sm-main-btn{
+  background: #1EAAF1;
+  width: 80px;
+  padding: 5px;
   color: #fff;
   font-weight: 500;
   border-radius: 5px;

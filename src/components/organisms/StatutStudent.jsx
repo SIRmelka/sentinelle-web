@@ -14,12 +14,14 @@ export default function StatutStudent() {
         <div className="content">
           <div className="picture"></div>
           <div className="resume">
-            <ResumeBox />
-            <ResumeBox />
-            <ResumeBox />
-            <ResumeBox />
+            <ResumeBox title={"Moyenne"} success={true} note={"80%"} />
+            <ResumeBox title={"Absences"} success={true} note={1} />
+            <ResumeBox title={"Force"} success={true} note={"Français"} />
+            <ResumeBox title={"Faiblesse"} success={false} note={"Anglais"} />
           </div>
         </div>
+        <p style={{ fontWeight: "bold", marginBottom: "10px" }}>Publicité</p>
+        <div className="add">asd</div>
       </div>
     </div>
   );

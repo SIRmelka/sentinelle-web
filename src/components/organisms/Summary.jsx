@@ -7,13 +7,6 @@ export default function Summary() {
   return (
     <div className="summary">
       <StatutStudent />
-      <MiniHeader />
-      <div className="notes">
-        <NoteCard />
-        <NoteCard />
-        <NoteCard />
-        <NoteCard />
-      </div>
     </div>
   );
 }
