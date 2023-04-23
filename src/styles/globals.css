@@ -19,11 +19,13 @@
 @import './organisms/summary.css';
 
 @import './Home.css';
+@import './login.css';
 
 
 @layer base{
   html{
       font-family: Work Sans;
+      background: #fff;
   }
 }
 
@@ -36,6 +38,16 @@
  position: relative;
   justify-content: space-around;
 }
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-btn,.sm-main-btn,.outlined-btn{
+  cursor: pointer;
+}
+
 .main-btn{
   background: #1EAAF1;
   width: 120px;
@@ -43,6 +55,9 @@
   color: #fff;
   font-weight: 500;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sm-main-btn{
   background: #1EAAF1;
@@ -51,6 +66,9 @@
   color: #fff;
   font-weight: 500;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .outlined-btn{
   background: #fff;
@@ -60,6 +78,9 @@
   border:1px solid #1EAAF1;
   font-weight: 500;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 h1,h2,h3,h4,h5,h6,p{
   color: #444;
@@ -67,3 +88,4 @@ h1,h2,h3,h4,h5,h6,p{
 .primary-color{
   color: #1EAAF1;
 }
+

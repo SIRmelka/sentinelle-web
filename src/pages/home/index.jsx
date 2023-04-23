@@ -1,64 +1,86 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Caroussel from "../../components/organisms/Caroussel";
 import Summary from "../../components/organisms/Summary";
 import NoteCard from "../../components/molecules/NoteCard";
 import MiniHeader from "../../components/molecules/MiniHeader";
 import SideBar from "../../components/molecules/SideBar";
 import RessourceCard from "../../components/molecules/RessourceCard";
+import { workStore } from "../../store/workStore";
+import { ressourceStore } from "../../store/ressourceStore";
+import Header from "../../components/organisms/Header";
+import MainLoader from "../../components/organisms/MainLoader";
 
 export default function Home() {
+  const [works, getWorks] = workStore((state) => [state.works, state.getWorks]);
+  const [ressources, getRessources] = ressourceStore((state) => [
+    state.ressources,
+    state.getRessources,
+  ]);
+  const [loading, setLoadig] = useState(true);
+
+  useEffect(() => {
+    localStorage.getItem("userId")
+      ? setLoadig(false)
+      : window.location.replace(`${process.env.NEXT_PUBLIC_WEB}auth`);
+    getRessources();
+    getWorks();
+  }, []);
+
   return (
-    <div className="home flex">
-      <SideBar />
-      <div>
-        <div className="main-layout flex flex-row flex-wrap">
-          <div className="caroussel-container">
-            <Caroussel />
-          </div>
-          <div className="summary-container">
-            <Summary />
-          </div>
-        </div>
-        <div className="other-data flex-row flex-wrap">
-          <div className="ressources">
-            <div className="ressources-card">
-              <RessourceCard
-                background={
-                  "https://m.media-amazon.com/images/I/610RsJK5jlL._AC_UF1000,1000_QL80_.jpg"
-                }
-              />
-              <RessourceCard
-                background={
-                  "https://www.cahiers-pedagogiques.com/wp-content/uploads/2019/09/arton12217.jpg"
-                }
-              />
-              <RessourceCard
-                background={
-                  "https://librairiespaulines.com/wp-content/uploads/2020/09/Math-3.jpg"
-                }
-              />
-              <RessourceCard
-                background={
-                  "https://www.editions-hatier.fr/sites/default/files/couvertures/couverture_8588402.jpg"
-                }
-              />
+    <>
+      {loading && <MainLoader />}
+      <Header />
+      <div className="home flex">
+        <SideBar />
+        <div>
+          <div className="main-layout flex flex-row flex-wrap">
+            <div className="caroussel-container">
+              <Caroussel />
             </div>
-            <p style={{ fontWeight: "bold", marginBottom: "10px" }}>
-              Publicité
-            </p>
-            <div className="add">asd</div>
+            <div className="summary-container">
+              <Summary />
+            </div>
           </div>
-          <div className="notes">
-            <MiniHeader />
-            <div className="notes-card">
-              <NoteCard />
-              <NoteCard />
-              <NoteCard />
-              <NoteCard />
+          <div className="other-data flex-row flex-wrap">
+            <div className="ressources">
+              <div className="ressources-card">
+                {ressources &&
+                  ressources.map((ressource) => {
+                    return (
+                      <RessourceCard
+                        name={ressource.title}
+                        type={ressource.type}
+                        price={ressource.price}
+                        background={ressource.cover}
+                      />
+                    );
+                  })}
+              </div>
+              <p style={{ fontWeight: "bold", marginBottom: "10px" }}>
+                Publicité
+              </p>
+              <div className="add"></div>
+            </div>
+            <div className="notes">
+              <MiniHeader />
+              <div className="notes-card">
+                {works.map((work) => {
+                  return (
+                    <NoteCard
+                      label={work.type}
+                      cours={work.course}
+                      result={work.cote}
+                      date={work.date}
+                      maxima={work.maxima}
+                      description={work.description}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

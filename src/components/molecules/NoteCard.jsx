@@ -3,7 +3,14 @@ import Title from "../atoms/Title";
 import icon from "../../assets/images/quizz.png";
 import { Result } from "postcss";
 
-export default function NoteCard({ label, cours, description, result, date }) {
+export default function NoteCard({
+  label,
+  cours,
+  description,
+  result,
+  maxima,
+  date,
+}) {
   return (
     <div className="note-card">
       <div className="note-header">
@@ -19,7 +26,7 @@ export default function NoteCard({ label, cours, description, result, date }) {
         <div className="note-header-icon">
           <img
             src={`./assets/images/${
-              label == "intero" ? quizz.png : "homework.png"
+              label == "intero" ? "quizz.png" : "homework.png"
             }`}
           />
         </div>
@@ -28,7 +35,7 @@ export default function NoteCard({ label, cours, description, result, date }) {
         <p>{description}</p>
       </div>
       <div className="note-footer">
-        <div className="note-value">{result}</div>
+        <div className="note-value">{result + "/" + maxima}</div>
         <div className="note-date">
           <p className="font-bold">{date}</p>
         </div>

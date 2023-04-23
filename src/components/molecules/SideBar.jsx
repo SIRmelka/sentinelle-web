@@ -8,10 +8,14 @@ export default function SideBar() {
   return (
     <div className="sidebar flex items-center">
       <div className="sidebar-box">
-        <NavigationButton icon={<IoHomeOutline />} selected={true} />
-        <NavigationButton icon={<HiOutlineNewspaper />} />
-        <NavigationButton icon={<GiBookshelf />} />
-        <NavigationButton icon={<FaRegUserCircle />} />
+        <NavigationButton
+          label={"acceuil"}
+          icon={<IoHomeOutline />}
+          selected={true}
+        />
+        <NavigationButton label={"communiqués"} icon={<HiOutlineNewspaper />} />
+        <NavigationButton label={"Journal"} icon={<GiBookshelf />} />
+        <NavigationButton label={"profil"} icon={<FaRegUserCircle />} />
       </div>
     </div>
   );
