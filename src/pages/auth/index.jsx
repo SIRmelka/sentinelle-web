@@ -23,7 +23,7 @@ export default function Login() {
     !localStorage.getItem("userId")
       ? setLoading(false)
       : window.location.replace(`${process.env.NEXT_PUBLIC_WEB}home`);
-  });
+  }, []);
 
   const submit = () => {
     setIsLogging(true);

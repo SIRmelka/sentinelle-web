@@ -15,7 +15,7 @@ export const userStore = create((set) => ({
   },
   login: async (user, throwError, logUser) => {
     const newUser = await axios
-      .post(`${process.env.NEXT_PUBLIC_API}student`, user, {
+      .post(`${process.env.NEXT_PUBLIC_API}auth/signin`, user, {
         headers: {
           Authorization: `Bearer `,
         },
@@ -25,6 +25,7 @@ export const userStore = create((set) => ({
         logUser(e);
       })
       .catch((e) => {
+        console.log(e);
         try {
           switch (e.response.data.message) {
             case "User not found":
