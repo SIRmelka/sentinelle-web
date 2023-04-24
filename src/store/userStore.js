@@ -17,7 +17,9 @@ export const userStore = create((set) => ({
     const newUser = await axios
       .post(`${process.env.NEXT_PUBLIC_API}auth/signin`, user, {
         headers: {
+          Access-Control-Allow-Origin: "*",
           Authorization: `Bearer `,
+          
         },
       })
       .then((e) => {
