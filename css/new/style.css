@@ -1,0 +1,72 @@
+﻿.carou{
+    height:35em;
+    background: #777;
+    color:white;
+    position:relative;
+
+}
+.carou h2,h1,.lead{
+    text-shadow: 0,0,0,5;
+    color:white;
+    font-weight: bold;
+    font-family: arial;
+    font-size:1.5rem;
+}
+.content    
+{
+    height:28em;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding-top: 10rem;
+    text-align: center;
+}
+.overlay-image{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    top:0;
+    background-position: center;
+    background-size: cover;
+}
+.point
+{
+    font-size: 2em;
+    font-weight:bold;
+    color:#f1453d;
+}
+.cotes .card{
+    margin:1em;
+}
+.cours
+{
+    font-weight: bold;
+}
+.mini
+{
+    width:6em;
+}
+.table .icon-question{
+    font-size: 2em;
+    color:#1eaaf1;
+}
+.table .icon-warning2{
+    font-size: 2em;
+    color:#f1453d;
+}
+.contact a{
+    color:#fff;
+}
+.sub{
+    color:#000;
+    font-size:1.5em;
+}
+.down{
+    font-size: 2em;
+}
+.disconnect
+{
+    display:none;
+}

@@ -1,0 +1,23 @@
+<section class="ftco-section">
+      <div class="container">
+        <div class="row">
+
+          <div class="container col-xs-6 col-md-3 col-lg-3 ftco-animate">
+              <div class="container card px-4 text-center border-primary">
+              	<div class="container center"><img class="mini img img-rounded"src="images/tool7.png"></div>
+                <p>Juillet</p>
+              </div><br>
+          </div>
+
+          <div class="container col-xs-6 col-md-3 col-lg-3 ftco-animate">
+              <div class="container card px-4 text-center border-primary">
+              	<div class="container center"><img class="mini img img-rounded"src="images/tool7.png"></div>
+                <p>Juillet</p>
+              </div><br>
+          </div>
+
+      
+
+        </div>
+      </div>
+    </section>
